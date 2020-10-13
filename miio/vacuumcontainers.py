@@ -186,6 +186,9 @@ class VacuumStatus:
         s += "cleaned %s m² in %s>" % (self.clean_area, self.clean_time)
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class CleaningSummary:
     """Contains summarized information about available cleaning runs."""
@@ -224,6 +227,9 @@ class CleaningSummary:
             "<CleaningSummary: %s times, total time: %s, total area: %s, ids: %s>"
             % (self.count, self.total_duration, self.total_area, self.ids)  # noqa: E501
         )
+
+    def __json__(self):
+        return self.data
 
 
 class CleaningDetails:
@@ -278,6 +284,9 @@ class CleaningDetails:
             self.complete,
             self.area,
         )
+
+    def __json__(self):
+        return self.data
 
 
 class ConsumableStatus:
@@ -352,6 +361,9 @@ class ConsumableStatus:
             )
         )
 
+    def __json__(self):
+        return self.data
+
 
 class DNDStatus:
     """A container for the do-not-disturb status."""
@@ -382,6 +394,9 @@ class DNDStatus:
             self.start,
             self.end,
         )
+
+    def __json__(self):
+        return self.data
 
 
 class Timer:
@@ -439,6 +454,9 @@ class Timer:
             self.cron,
         )
 
+    def __json__(self):
+        return self.data
+
 
 class SoundStatus:
     """Container for sound status."""
@@ -460,6 +478,9 @@ class SoundStatus:
             self.current,
             self.being_installed,
         )
+
+    def __json__(self):
+        return self.data
 
 
 class SoundInstallState(IntEnum):
@@ -523,6 +544,9 @@ class SoundInstallStatus:
             " - progress: %s>" % (self.sid, self.state, self.error, self.progress)
         )
 
+    def __json__(self):
+        return self.data
+
 
 class CarpetModeStatus:
     """Container for carpet mode status."""
@@ -566,3 +590,6 @@ class CarpetModeStatus:
                 self.current_integral,
             )
         )
+
+    def __json__(self):
+        return self.data

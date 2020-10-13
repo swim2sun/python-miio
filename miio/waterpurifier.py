@@ -130,6 +130,9 @@ class WaterPurifierStatus:
             )
         )
 
+    def __json__(self):
+        return self.data
+
 
 class WaterPurifier(Device):
     """Main class representing the waiter purifier."""

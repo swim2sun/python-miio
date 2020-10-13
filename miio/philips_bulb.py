@@ -81,6 +81,9 @@ class PhilipsBulbStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class PhilipsWhiteBulb(Device):
     """Main class representing Xiaomi Philips White LED Ball Lamp."""

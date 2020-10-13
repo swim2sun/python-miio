@@ -117,6 +117,9 @@ class WifiSpeakerStatus:
 
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class WifiSpeaker(Device):
     """Device class for Xiaomi Smart Wifi Speaker."""

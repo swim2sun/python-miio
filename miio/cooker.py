@@ -146,6 +146,9 @@ class TemperatureHistory:
         s = "<TemperatureHistory temperatures=%s>" % str(self.data)
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class CookerCustomizations:
     def __init__(self, custom: str):

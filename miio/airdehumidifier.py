@@ -184,6 +184,9 @@ class AirDehumidifierStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class AirDehumidifier(Device):
     """Implementation of Xiaomi Mi Air Dehumidifier."""

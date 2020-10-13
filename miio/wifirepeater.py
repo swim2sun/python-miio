@@ -46,6 +46,9 @@ class WifiRepeaterStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class WifiRepeaterConfiguration:
     def __init__(self, data):
@@ -75,6 +78,9 @@ class WifiRepeaterConfiguration:
             "ssid_hidden=%s>" % (self.ssid, self.password, self.ssid_hidden)
         )
         return s
+
+    def __json__(self):
+        return self.data
 
 
 class WifiRepeater(Device):

@@ -177,6 +177,9 @@ class CameraStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class AqaraCamera(Device):
     """Main class representing the Xiaomi Aqara Camera."""

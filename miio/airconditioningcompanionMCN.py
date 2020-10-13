@@ -118,6 +118,9 @@ class AirConditioningCompanionStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class AirConditioningCompanionMcn02(Device):
     """Main class representing Xiaomi Air Conditioning Companion V1 and V2."""

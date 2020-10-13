@@ -105,6 +105,9 @@ class PhilipsMoonlightStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class PhilipsMoonlight(Device):
     """Main class representing Xiaomi Philips Zhirui Bedside Lamp.

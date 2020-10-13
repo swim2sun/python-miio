@@ -100,6 +100,9 @@ class ChuangmiPlugStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class ChuangmiPlug(Device):
     """Main class representing the Chuangmi Plug."""

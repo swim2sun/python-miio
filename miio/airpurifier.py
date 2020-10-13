@@ -334,6 +334,9 @@ class AirPurifierStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class AirPurifier(Device):
     """Main class representing the air purifier."""

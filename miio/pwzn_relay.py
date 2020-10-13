@@ -102,6 +102,9 @@ class PwznRelayStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class PwznRelay(Device):
     """Main class representing the PWZN Relay."""

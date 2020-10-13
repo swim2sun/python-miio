@@ -100,6 +100,9 @@ class ViomiConsumableStatus(ConsumableStatus):
             )
         )
 
+    def __json__(self):
+        return self.data
+
 
 class ViomiVacuumSpeed(Enum):
     Silent = 0

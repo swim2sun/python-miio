@@ -272,6 +272,9 @@ class FanStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class FanStatusP5:
     """Container for status reports from the Xiaomi Mi Smart Pedestal Fan DMaker P5."""
@@ -359,6 +362,9 @@ class FanStatusP5:
             )
         )
         return s
+
+    def __json__(self):
+        return self.data
 
 
 class Fan(Device):

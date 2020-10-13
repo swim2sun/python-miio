@@ -128,6 +128,9 @@ class AirHumidifierStatus:
         )
         return s
 
+    def __json__(self):
+        return self.data
+
 
 class AirHumidifierMjjsq(Device):
     def __init__(
